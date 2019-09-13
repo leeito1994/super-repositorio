@@ -81,7 +81,7 @@ int dameMaxIndice(int array[],int cantidad)
 
 int dameMax(int array[], int cantidad)
 {
-     int i;
+    int i;
     int max;
 
 

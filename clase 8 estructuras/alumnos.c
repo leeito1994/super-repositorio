@@ -137,7 +137,7 @@ int buscarPorLegajo(sAlumno lista[],int cantidad,int legajo)
 
     if(cantidad > 0 && lista != NULL)
     {
-        for(i=0;i<cantidad;i++)
+        for(i=0; i<cantidad; i++)
         {
             retorno = i;
         }
@@ -147,5 +147,29 @@ int buscarPorLegajo(sAlumno lista[],int cantidad,int legajo)
 
 int darBaja(sAlumno lista[], int cantidad,int legajo)
 {
-    buscarPorLegajo(lista[i].legajo);
+    int index;
+    int retorno = -1;
+    if(lista != NULL && cantidad > 0)
+    {
+        mostrarListadoAlumnos(lista,cantidad);
+
+        printf("ingrese legajo ");
+        scanf("%d",&legajo);
+
+        index = buscarPorLegajo(lista,cantidad,legajo);
+        if(index !=-1)
+        {
+            mostrarAlumno(lista[index]);
+            lista[index].estado = LIBRE;
+            retorno =0;
+        }
+
+    }
+    /*legajo = buscarPorLegajo(lista,cantidad,legajo);
+    if(lista[i].estado == OCUPADO)
+    {
+        lista[i].estado == LIBRE;
+        retorno = 1;
+    }*/
+    return retorno;
 }

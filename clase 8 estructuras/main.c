@@ -17,7 +17,7 @@ int main()
             printf("2. mostrar alumnos \n");
             printf("3. ordenar alumnos por nombre\n");
             printf("4. buscar por legajo");
-            printf("5. para salir\n");
+            printf("5. eliminar salumno\n");
             printf("elija opcion ");
             scanf("%d",&opcion);
             switch(opcion)
@@ -46,16 +46,17 @@ int main()
             case 4:
                 index = buscarPorLegajo(listaAlumnos,A,100);
                 mostrarAlumno(listaAlumnos[index]);
-
                 break;
-
+            case 5:
+                darBaja(listaAlumnos,A,103);
+                break;
 
             }
 
             system("pause");
             system("cls");
         }
-        while (opcion != 5);
+        while (opcion != 6);
     }
     else
     {

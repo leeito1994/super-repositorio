@@ -22,4 +22,5 @@ void hardcodearAlumnos(sAlumno[],int cantidad);
 int inicializarAlumno(sAlumno[],int);
 int buscarLibre(sAlumno[],int);
 int buscarPorLegajo(sAlumno[],int,int);
+int darBaja(sAlumno[], int,int);
 

@@ -144,3 +144,8 @@ int buscarPorLegajo(sAlumno lista[],int cantidad,int legajo)
     }
     return retorno;
 }
+
+int darBaja(sAlumno lista[], int cantidad,int legajo)
+{
+    buscarPorLegajo(lista[i].legajo);
+}

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1568470761 source:d:\martinezlmlm\super-repositorio\recuperatorio asasasa\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1568470771 source:d:\martinezlmlm\super-repositorio\recuperatorio asasasa\funciones.c
+	"funciones.h"
+	"stdio.h"
+	"string.h"
+
+1568470447 d:\martinezlmlm\super-repositorio\recuperatorio asasasa\funciones.h
+	<stdio.h>
+	<stdlib.h>
+

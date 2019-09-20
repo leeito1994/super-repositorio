@@ -11,7 +11,7 @@ sAlumno pedirAlumno()
 {
     sAlumno miAlumno;
 
-     printf("ingrese legajo: ");
+    printf("ingrese legajo: ");
     scanf("%d",&miAlumno.legajo);
 
     printf("ingrese nombre: ");
@@ -20,6 +20,8 @@ sAlumno pedirAlumno()
 
     printf("ingrese nota: ");
     scanf("%d",&miAlumno.nota);
+
+    miAlumno.estado = LIBRE;
 
     return miAlumno;
 }
@@ -34,23 +36,31 @@ int compararAlumnoPorLegajo(sAlumno unAlumno,sAlumno otroAlumno)
     return comp;
 }
 
-void cargarAlumnos(sAlumno lista[],int cantidad)
+int cargarAlumnos(sAlumno lista[],int cantidad)
 {
     int i;
-    for(i=0;i<cantidad;i++)
+
+    int retorno=0;
+
+    i = buscarLibre(lista,cantidad);
+    if(i != -1)
     {
-        /*printf("ingrese legajo: ");
-        scanf("%d",&listaAlumnos[i].legajo);*/
         lista[i] = pedirAlumno();
+        lista[i].estado = OCUPADO;
+        retorno = 1;
     }
+    return retorno;
 }
 
 void mostrarListadoAlumnos(sAlumno lista[],int elemento)
 {
     int i;
-     for(i=0;i<elemento;i++)
+    for(i=0; i<elemento; i++)
     {
-        mostrarAlumno(lista[i]);
+        if(lista[i].estado == OCUPADO)
+        {
+            mostrarAlumno(lista[i]);
+        }
     }
 }
 
@@ -60,11 +70,11 @@ void ordenarAlumnosPorNombre(sAlumno lista[],int cantidad)
     int j;
     sAlumno auxAlumno;
 
-    for(i=0;i<cantidad*1;i++)
+    for(i=0; i<cantidad*1; i++)
     {
-        for(j=i+1;j<cantidad;j++)
+        for(j=i+1; j<cantidad; j++)
         {
-            if(strcmp(lista[i].nombre,lista[j].nombre)<0)
+            if(strcmp(lista[i].nombre,lista[j].nombre)>0)
             {
                 auxAlumno = lista[i];
                 lista[i] = lista[j];
@@ -76,15 +86,61 @@ void ordenarAlumnosPorNombre(sAlumno lista[],int cantidad)
 
 void hardcodearAlumnos(sAlumno lista[],int cantidad)
 {
-    int legajo[3] = {101,102,105};
-    int nota[3] = {10,5,9};
-    char nombre[3][50] = {"juan","maria","jose"};
+    int legajo[5] = {101,102,105,103,100};
+    int nota[5] = {10,5,9,3,7};
+    char nombre[5][50] = {"juan","maria","jose","ramon","mateo"};
     int i;
 
-    for(i=0;i<cantidad;i++)
+    for(i=0; i<cantidad; i++)
     {
         lista[i].legajo=legajo[i];
         lista[i].nota=nota[i];
         strcpy(lista[i].nombre,nombre[i]);
+        lista[i].estado = OCUPADO;
     }
+}
+
+int inicializarAlumno(sAlumno lista[],int cantidad)
+{
+    int i;
+    int retorno=-1;
+    if(cantidad > 0 && lista != NULL)
+    {
+        for(i=0; i<cantidad; i++)
+        {
+            lista[i].estado = LIBRE;
+        }
+        retorno = 0;
+    }
+    return retorno;
+}
+
+int buscarLibre(sAlumno lista[],int cantidad)
+{
+    int i;
+    int index = -1;
+    for(i=0; i<cantidad; i++)
+    {
+        if(lista[i].estado == LIBRE)
+        {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
+
+int buscarPorLegajo(sAlumno lista[],int cantidad,int legajo)
+{
+    int i;
+    int retorno = -1;
+
+    if(cantidad > 0 && lista != NULL)
+    {
+        for(i=0;i<cantidad;i++)
+        {
+            retorno = i;
+        }
+    }
+    return retorno;
 }

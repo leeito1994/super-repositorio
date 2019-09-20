@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1568387463 source:d:\martinezlm\nuevo super repositorio\super-repositorio\clase 8 estructuras\main.c
+1568986406 source:d:\martinezlm\nuevo super repositorio\super-repositorio\clase 8 estructuras\main.c
 	<stdio.h>
 	<stdlib.h>
 	"alumnos.h"
 
-1568387114 d:\martinezlm\nuevo super repositorio\super-repositorio\clase 8 estructuras\alumnos.h
+1568986366 d:\martinezlm\nuevo super repositorio\super-repositorio\clase 8 estructuras\alumnos.h
 	"stdio.h"
 	"string.h"
 
-1568387114 source:d:\martinezlm\nuevo super repositorio\super-repositorio\clase 8 estructuras\alumnos.c
+1568986486 source:d:\martinezlm\nuevo super repositorio\super-repositorio\clase 8 estructuras\alumnos.c
 	"alumnos.h"
 

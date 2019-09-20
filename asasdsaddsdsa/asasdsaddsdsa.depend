@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1568900155 source:d:\martinezlm\nuevo super repositorio\asasdsaddsdsa\asd.c
+	"asd.h"
+
+1568902775 d:\martinezlm\nuevo super repositorio\asasdsaddsdsa\asd.h
+	<stdio.h>
+	<stdlib.h>
+
+1568902072 source:d:\martinezlm\nuevo super repositorio\asasdsaddsdsa\main.c
+	"asd.h"
+
+1568902072 source:d:\martinezlm\nuevo super repositorio\super-repositorio\asasdsaddsdsa\main.c
+	"asd.h"
+
+1568902775 d:\martinezlm\nuevo super repositorio\super-repositorio\asasdsaddsdsa\asd.h
+	<stdio.h>
+	<stdlib.h>
+

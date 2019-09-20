@@ -1,48 +1,71 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "alumnos.h"
-#define A 3
+#define A 5
 
 int main()
 {
     sAlumno listaAlumnos[A];
-    int i;
+    //int i;
     int opcion;
+    int index;
+    if(inicializarAlumno(listaAlumnos,A)==0)
+    {
+        do
+        {
+            printf("1.cargar alumnos: \n");
+            printf("2. mostrar alumnos \n");
+            printf("3. ordenar alumnos por nombre\n");
+            printf("4. buscar por legajo");
+            printf("5. para salir\n");
+            printf("elija opcion ");
+            scanf("%d",&opcion);
+            switch(opcion)
+            {
+            case 1:
+                /*if(cargarAlumnos(listaAlumnos,A)==1)
+                {
+                    printf("\ncarga exitosa!\n");
+                }
+                else
+                {
+                    printf("\ncarga fallida\n");
+                }
+                */
+                hardcodearAlumnos(listaAlumnos,A);
+                break;
+
+            case 2:
+                mostrarListadoAlumnos(listaAlumnos,A);
+                break;
+
+            case 3:
+                ordenarAlumnosPorNombre(listaAlumnos,A);
+                break;
+
+            case 4:
+                index = buscarPorLegajo(listaAlumnos,A,100);
+                mostrarAlumno(listaAlumnos[index]);
+
+                break;
+
+
+            }
+
+            system("pause");
+            system("cls");
+        }
+        while (opcion != 5);
+    }
+    else
+    {
+        printf("hubo un problemon!!");
+    }
 
     //cargarAlumnos(listaAlumnos,A);
-    mostrarListadoAlumnos(listaAlumnos,A);
+    //mostrarListadoAlumnos(listaAlumnos,A);
 
-    do
-    {
-        printf("1.cargar alumnos: \n");
-        printf("2. mostrar alumnos \n");
-        printf("3. ordenar alumnos por nombre\n");
-        printf("elija opcion ");
-        scanf("%d",&opcion);
-        switch(opcion)
-        {
-        case 1:
-            //cargarAlumnos(listaAlumnos,A);
-            hardcodearAlumnos(listaAlumnos,A);
-            break;
 
-        case 2:
-            mostrarListadoAlumnos(listaAlumnos,A);
-            break;
-
-        case 3:
-            ordenarAlumnosPorNombre(listaAlumnos,A);
-            break;
-
-        case 4:
-            mostrarListadoAlumnos(listaAlumnos,A);
-            break;
-
-        }
-
- system("pause");
- system("cls");
-    }while (opcion != 5);
 
     /*sAlumno miAlumno;//={100,"pepe",7};
     sAlumno otroAlumno;
@@ -59,8 +82,8 @@ int main()
         printf("\nno tienen el mismo legajo ");
     }
 
-   //mostrarAlumno(miAlumno);
-*/
+    //mostrarAlumno(miAlumno);
+    */
     return 0;
 
 }

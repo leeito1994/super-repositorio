@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1569509513 source:d:\martinezlm\nuevo super repositorio\doble estructura\dobleestructura.c
+	"dobleEstructura.h"
+	"string.h"
+
+1569508584 d:\martinezlm\nuevo super repositorio\doble estructura\dobleestructura.h
+	<stdio.h>
+	<stdlib.h>
+
+1569509470 source:d:\martinezlm\nuevo super repositorio\doble estructura\main.c
+	"dobleEstructura.h"
+

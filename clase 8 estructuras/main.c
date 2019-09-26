@@ -9,6 +9,7 @@ int main()
     //int i;
     int opcion;
     int index;
+
     if(inicializarAlumno(listaAlumnos,A)==0)
     {
         do
@@ -16,7 +17,7 @@ int main()
             printf("1.cargar alumnos: \n");
             printf("2. mostrar alumnos \n");
             printf("3. ordenar alumnos por nombre\n");
-            printf("4. buscar por legajo");
+            printf("4. buscar por legajo\n");
             printf("5. eliminar salumno\n");
             printf("elija opcion ");
             scanf("%d",&opcion);
@@ -44,11 +45,11 @@ int main()
                 break;
 
             case 4:
-                index = buscarPorLegajo(listaAlumnos,A,100);
+                index = buscarPorLegajo(listaAlumnos,A);
                 mostrarAlumno(listaAlumnos[index]);
                 break;
             case 5:
-                darBaja(listaAlumnos,A,103);
+                darBaja(listaAlumnos,A);
                 break;
 
             }

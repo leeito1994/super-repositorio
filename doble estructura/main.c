@@ -7,16 +7,17 @@ int main()
     sPersona laPersona[T];
     sVehiculo vehiculo[T];
     int i;
-
     hardcodearDatos(laPersona,laFecha,T);
     hardcodearVehiculos(vehiculo,laFecha,laPersona,T);
     mostrarTodo(laPersona,laFecha,vehiculo,T);
+    mostrarUnAutito(laPersona,vehiculo,T);
     printf("\nFUNCIONAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
     i = buscarIndicePersona(laPersona,T);
+
     if(i != -1)
     {
-        mostrarUnaPersona(laPersona[i],laFecha[i]);
+        mostrarUnaPersona(laPersona[i]);
     }
     else
     {

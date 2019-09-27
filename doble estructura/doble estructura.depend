@@ -10,3 +10,14 @@
 1569509470 source:d:\martinezlm\nuevo super repositorio\doble estructura\main.c
 	"dobleEstructura.h"
 
+1569586983 source:d:\martinezlm\nuevo super repositorio\super-repositorio\doble estructura\main.c
+	"dobleEstructura.h"
+
+1569588481 d:\martinezlm\nuevo super repositorio\super-repositorio\doble estructura\dobleestructura.h
+	<stdio.h>
+	<stdlib.h>
+
+1569588495 source:d:\martinezlm\nuevo super repositorio\super-repositorio\doble estructura\dobleestructura.c
+	"dobleEstructura.h"
+	"string.h"
+

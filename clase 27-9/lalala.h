@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 typedef struct
 {
     int dia;
@@ -27,12 +28,12 @@ typedef struct
 
 }sVehiculo;
 
-void hardcodearDatos(sPersona[], sFecha[], int);
-void mostrarTodo (sPersona[], sFecha[] , sVehiculo[],int);
-void hardcodearVehiculos(sVehiculo[], sFecha[], sPersona[],int);
-int buscarIndicePersona(sPersona[], int);
+void messi(int);
+void mostrarListaDePersonas(sPersona[],int);
+void mostrarlistaAutitos(sVehiculo[],int);
 void mostrarUnaPersona(sPersona);
-void mostrarUnAutito(sVehiculo,sPersona[],int);
-
+void mostrarUnAutito(sVehiculo);
+int buscarPersona(sPersona[],int);
+void mostrarAutosId(sVehiculo [],sPersona[],int,int);
 
 

@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1569619471 source:c:\users\luisa\desktop\tp 2\misfunciones.c
+	"misFunciones.h"
+	"string.h"
+
+1569669472 c:\users\luisa\desktop\tp 2\misfunciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1569616700 source:c:\users\luisa\desktop\tp 2\main.c
+	"misFunciones.h"
+
+1569669569 source:c:\users\luisa\desktop\tp_laboratorio_2\main.c
+	"misFunciones.h"
+
+1569669472 c:\users\luisa\desktop\tp_laboratorio_2\misfunciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1569619471 source:c:\users\luisa\desktop\tp_laboratorio_2\misfunciones.c
+	"misFunciones.h"
+	"string.h"
+

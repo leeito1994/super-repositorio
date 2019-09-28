@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define T 5
+#define T 11
 
 //int const T = 10;
 
@@ -23,7 +23,7 @@ int main()
     int maximo;
     int minimo;
 
-    cargarVector(vectorDeNumeros, T);
+    //cargarVector(vectorDeNumeros, T);
     mostrarVector(vectorDeNumeros,T);
     mostrarNegativos(vectorDeNumeros,T);
     mostrarPromedio(vectorDeNumeros,T);

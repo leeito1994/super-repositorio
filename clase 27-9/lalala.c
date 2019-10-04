@@ -67,9 +67,10 @@ void mostrarlistaAutitos(sVehiculo lista[],int cantidad)
     int i;
     for(i=0; i<cantidad; i++)
     {
-        printf("%s   %d/%d/%d  %d %d\n",lista[i].patente,lista[i].fechaIngreso,lista[i].horaIngreso,lista[i].horaSalida);
+        printf("%s   %d/%d/%d %d %d\n",lista[i].patente,lista[i].fechaIngreso,lista[i].horaIngreso,lista[i].horaSalida);
     }
 }
+
 void mostrarUnaPersona(sPersona lista)
 {
     printf("%s  %d %d %d\n",lista.nombre,lista.fecha.dia,lista.fecha.mes,lista.fecha.anio);
@@ -91,7 +92,7 @@ int buscarPersona(sPersona lista[],int cantidad)
     {
         if(id == lista[i].id)
         {
-            return i;
+            return id;
             break;
         }
     }

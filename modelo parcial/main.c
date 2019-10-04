@@ -12,7 +12,7 @@ int main()
         printf("1. hardcodear personas ");
         printf("\n2. mostrar personas ");
         printf("\n3. ordenar personas ");
-        printf("\n 4. mostrar dueño con patente ");
+        printf("\n4. mostrar duenio con patente ");
         scanf("%d",&operacion);
 
         switch(operacion)
@@ -25,11 +25,14 @@ int main()
             break;
         case 3:
             ordenarPorNombreYNacimiento(listaPersonas,T);
+            ordenarIds(listaPersonas,T);
             mostrarPersonas(listaPersonas,T);
             break;
         case 4:
             cargarTwistedMetal(listaAutitos,P);
-            mostrarAutitos(listaPersonas,listaAutitos,P);
+            //mostrarAutitos(listaPersonas,listaAutitos,T,P);
+            mostrarDuenioConAutos(listaPersonas,listaAutitos,T,P);
+
             break;
         }
         system("pause");

@@ -10,3 +10,14 @@
 1570115530 source:d:\martinezlm\nuevo super repositorio\modelo parcial\modeloparcial.c
 	"modeloparcial.h"
 
+1570203208 source:d:\martinezlm\nuevo super repositorio\super-repositorio\modelo parcial\modeloparcial.c
+	"modeloparcial.h"
+
+1570202846 d:\martinezlm\nuevo super repositorio\super-repositorio\modelo parcial\modeloparcial.h
+	<stdio.h>
+	<stdlib.h>
+	"string.h"
+
+1570202846 source:d:\martinezlm\nuevo super repositorio\super-repositorio\modelo parcial\main.c
+	"modeloparcial.h"
+

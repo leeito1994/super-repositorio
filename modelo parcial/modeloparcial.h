@@ -33,6 +33,8 @@ typedef struct
 void cargarPersonas(sPersona personas[], int cantidad);
 void mostrarPersonas(sPersona [], int);
 void cargarTwistedMetal(sVehiculos[],int);
-void mostrarAutitos(sPersona[],sVehiculos[],int);
+void mostrarAutitos(sPersona[],sVehiculos[],int,int);
 void ordenarPorNombreYNacimiento(sPersona[],int);
-//int buscarId(sPersona persona[],int id, int cantidad);
+void ordenarIds(sPersona[], int);
+//void mostrarDuenioConAutos(sPersona[],sVehiculos[],int,int);
+int buscarId(sPersona persona[]int cantidad);

@@ -1,19 +1,5 @@
 #include "modeloparcial.h"
 
-/*int buscarId(sPersona persona[],int id, int cantidad)
-{
-    int i;
-    int retorno = -1;
-    for(i=0;i<cantidad;i++)
-    {
-        if(id == persona[i].id)
-        {
-            retorno = i;
-        }
-    }
-    return retorno;
-}*/
-
 void cargarPersonas(sPersona listaPersonas[],int cant)
 {
     char nombre[][51]= {"Maria","Ezequiel","German","Yanina"};
@@ -92,13 +78,59 @@ void cargarTwistedMetal(sVehiculos listaAutitos[],int cantidad)
     }
 }
 
-void mostrarAutitos(sPersona persona[], sVehiculos vehiculo[],int cantidad)
+void mostrarAutitos(sPersona persona[], sVehiculos vehiculo[],int cantidadPersonas, int cantidadAutos)
 {
     int i;
-    for(i=0;i<cantidad;i++)
+    int j;
+    for(i=0;i<cantidadPersonas;i++)
     {
-        printf("\n%d---%s----%s",persona[i].id,vehiculo[i].patente,persona[i].nombre);
+        for(j=0;j<cantidadAutos;j++)
+        {
+            if(persona[i].id == vehiculo[j].idPropietario)
+            {
+                printf("\n%d---%s----%s",persona[i].id,vehiculo[i].patente,persona[i].nombre);
+            }
+        }
     }
 }
 
+void ordenarIds(sPersona persona[], int cantidad)
+{
+    int i;
+    int j;
+    sPersona idAux;
+
+    for(i=0;i<cantidad-1;i++)
+    {
+        for(j=i+1;j<cantidad;j++)
+        {
+            if(persona[i].id > persona[j].id)
+            {
+
+            idAux = persona[i];
+            persona[i] = persona[j];
+            persona[j] = idAux;
+
+            }
+
+        }
+    }
+}
+
+int buscarId(sPersona persona[]int cantidad)
+{
+    int i;
+    int id;
+    mostrarPersonas(persona,cantidad);
+    printf("\ningrese id de persona")
+    scanf("%d",&id);
+
+    if(persona[i].id == id)
+    {
+        return id;
+    }
+
+}
+
+void mostrarDuenioConAutos(sPersona[],sVehiculos)
 

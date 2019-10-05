@@ -2,9 +2,9 @@
 
 int main()
 {
+    int i;
 
     sPersona listaPersonas[T];
-    //sFecha fechas[T];
     sVehiculos listaAutitos[P];
     int operacion;
 
@@ -12,13 +12,15 @@ int main()
         printf("1. hardcodear personas ");
         printf("\n2. mostrar personas ");
         printf("\n3. ordenar personas ");
-        printf("\n4. mostrar duenio con patente ");
+        printf("\n4. buscar duenio y mostrar patentes ");
+        printf("\n5. buscar por patente ");
         scanf("%d",&operacion);
 
         switch(operacion)
         {
         case 1:
             cargarPersonas(listaPersonas,T);
+            cargarTwistedMetal(listaAutitos,P);
             break;
         case 2:
             mostrarPersonas(listaPersonas,T);
@@ -29,15 +31,19 @@ int main()
             mostrarPersonas(listaPersonas,T);
             break;
         case 4:
-            cargarTwistedMetal(listaAutitos,P);
-            //mostrarAutitos(listaPersonas,listaAutitos,T,P);
             mostrarDuenioConAutos(listaPersonas,listaAutitos,T,P);
+            break;
+        case 5:
+            mostrarPatentes(listaAutitos,P);
+            buscarPorPatente(listaPersonas,listaAutitos,T,P);
+
+
 
             break;
         }
         system("pause");
         system("cls");
-    }while(operacion != 5);
+    }while(operacion != 6);
 
     printf("Hello world!\n");
     return 0;

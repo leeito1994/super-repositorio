@@ -14,6 +14,7 @@ int main()
         printf("\n3. ordenar personas ");
         printf("\n4. buscar duenio y mostrar patentes ");
         printf("\n5. buscar por patente ");
+        printf("\n6. lista de duenios con sus autos");
         scanf("%d",&operacion);
 
         switch(operacion)
@@ -24,6 +25,8 @@ int main()
             break;
         case 2:
             mostrarPersonas(listaPersonas,T);
+            //mostrarUnaPersona(listaPersonas);
+            mostrarListaAutos(listaAutitos,P);
             break;
         case 3:
             ordenarPorNombreYNacimiento(listaPersonas,T);
@@ -35,16 +38,16 @@ int main()
             break;
         case 5:
             mostrarPatentes(listaAutitos,P);
-            buscarPorPatente(listaPersonas,listaAutitos,T,P);
-
-
-
+            //buscarPorPatente(listaPersonas,listaAutitos,T,P);
+            buscarNombrePorPatente(listaAutitos,listaPersonas,P,T);
             break;
+        case 6:
+            listaDeDueniosConSusAutos(listaPersonas,listaAutitos,T,P);
+            plataPorAuto(listaAutitos,P);
         }
         system("pause");
         system("cls");
-    }while(operacion != 6);
+    }while(operacion != 7);
 
-    printf("Hello world!\n");
     return 0;
 }

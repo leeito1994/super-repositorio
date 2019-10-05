@@ -24,10 +24,16 @@ void mostrarPersonas(sPersona persona[], int cantidad)
     int i;
     for(i=0; i<cantidad; i++)
     {
-        printf("\n%d---%s---%d/%d/%d\n",persona[i].id,persona[i].nombre,persona[i].fechaNacimiento.dia,persona[i].fechaNacimiento.mes,persona[i].fechaNacimiento.anio);
+        mostrarUnaPersona(persona[i]);
+        //printf("\n%d---%s---%d/%d/%d\n",persona[i].id,persona[i].nombre,persona[i].fechaNacimiento.dia,persona[i].fechaNacimiento.mes,persona[i].fechaNacimiento.anio);
     }
 }
 
+void mostrarUnaPersona(sPersona persona)
+{
+     printf("\n%d---%s---%d/%d/%d\n",persona.id,persona.nombre,persona.fechaNacimiento.dia,persona.fechaNacimiento.mes,persona.fechaNacimiento.anio);
+
+}
 void ordenarPorNombreYNacimiento(sPersona persona[],int cantidad)
 {
     int i;
@@ -107,11 +113,9 @@ void ordenarIds(sPersona persona[], int cantidad)
         {
             if(persona[i].id > persona[j].id)
             {
-
                 idAux = persona[i];
                 persona[i] = persona[j];
                 persona[j] = idAux;
-
             }
 
         }
@@ -162,20 +166,20 @@ void mostrarDuenioConAutos(sPersona persona[],sVehiculos vehiculos[],int cantida
 
 void buscarPorPatente(sVehiculos vehiculo[],sPersona persona [],int cantidadPersonas,int cantidadVehiculos)
 {
-    char patente;
+
     int j;
     int i;
-    patente = buscarPatente(vehiculo,cantidadVehiculos);
+    int id;
 
-    for(j=0; j<cantidadVehiculos; j++)
+    id = buscarNombrePorPatente(vehiculo,persona,cantidadVehiculos,cantidadPersonas);
+    printf(id);
+    for(i=0; i<cantidadPersonas; i++)
     {
 
-        if(strcmp(vehiculo[j].patente,patente)==0)
+        if(persona[i].id == id)
         {
-            printf("%d",vehiculo[j].idPropietario);
+            printf("%s",persona[i].nombre);
         }
-
-
 
     }
 }
@@ -190,20 +194,74 @@ void mostrarPatentes(sVehiculos vehiculos[],int cantidadVehiculos)
     }
 }
 
-int buscarPatente(sVehiculos vehiculo [], int cantidadVehiculos)
+int buscarNombrePorPatente(sVehiculos vehiculo [],sPersona personas[], int cantidadVehiculos, int cantidadPersonas)
 {
     int i;
+    int j;
+    int id;
     char patente[8];
     printf("ingrese patente ");
     fflush(stdin);
     gets(patente);
 
+
     for(i=0; i<cantidadVehiculos; i++)
     {
-        if(strcmp(vehiculo[i].patente,patente)==0)
+
+        for(j=0; j<cantidadPersonas; j++)
         {
-            return i;
+            if(strcmp(vehiculo[i].patente,patente)==0 && personas[j].id == vehiculo[i].idPropietario)
+            {
+                mostrarUnaPersona(personas[j]);
+            }
         }
+    }
+
+}
+
+void listaDeDueniosConSusAutos(sPersona persona[],sVehiculos vehiculos[],int cantidadPersonas, int cantidadVehiculos)
+{
+    int i;
+    int j;
+
+    for(i=0;i<cantidadPersonas;i++)
+    {
+        mostrarUnaPersona(persona[i]);
+
+        for(j=0;j<cantidadVehiculos;j++)
+        {
+            if(persona[i].id == vehiculos[j].idPropietario)
+            {
+                mostrarUnAutito(vehiculos[j]);
+            }
+        }
+    }
+}
+
+void mostrarUnAutito(sVehiculos vehiculo)
+{
+    printf("\n%s---%d/%d/%d---%d---%d",vehiculo.patente,vehiculo.fechaIngreso,vehiculo.horaEntrada,vehiculo.horaSalida);
+}
+
+
+void mostrarListaAutos(sVehiculos autito[], int cantidadAutos)
+{
+    int i;
+    for(i=0;i<cantidadAutos;i++)
+    {
+        mostrarUnAutito(autito[i]);
+    }
+}
+
+void plataPorAuto(sVehiculos vehiculos[],int cantidadVehiculos)
+{
+    int i;
+    int plata;
+    for(i=0;i<cantidadVehiculos;i++)
+    {
+        plata = vehiculos[i].horaSalida - vehiculos[i].horaEntrada ;
+        plata = plata * 100;
+        printf("\nmonto a pagar %d",plata);
     }
 }
 

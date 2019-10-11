@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1570716022 source:c:\users\alumno\desktop\parcial laboratorio 1\main.c
+	"parcialLaboratorio1.h"
+
+1570716195 c:\users\alumno\desktop\parcial laboratorio 1\parciallaboratorio1.h
+	<stdio.h>
+	<stdlib.h>
+
+1570716022 source:c:\users\alumno\desktop\parcial laboratorio 1\parciallaboratorio1.c
+	"parcialLaboratorio1.h"
+	"string.h"
+
+1570716022 source:d:\martinezlm\nuevo super repositorio\super-repositorio\parcial laboratorio 1\main.c
+	"parcialLaboratorio1.h"
+
+1570716195 d:\martinezlm\nuevo super repositorio\super-repositorio\parcial laboratorio 1\parciallaboratorio1.h
+	<stdio.h>
+	<stdlib.h>
+

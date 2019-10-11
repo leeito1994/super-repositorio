@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1570806483 source:d:\martinezlm\nuevo super repositorio\punterosestructuras\estructura.c
+	"estructura.h"
+
+1570806415 d:\martinezlm\nuevo super repositorio\punterosestructuras\estructura.h
+	<stdio.h>
+	<stdlib.h>
+
+1570806190 source:d:\martinezlm\nuevo super repositorio\punterosestructuras\main.c
+	"estructura.h"
+

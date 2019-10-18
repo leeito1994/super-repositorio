@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1571411408 source:d:\martinezlm\nuevo super repositorio\clase misteriosa (memoria dinamica o punteros)\punterosomemoriadinamica.c
+	"punterosomemoriadinamica.h"
+
+1571410629 d:\martinezlm\nuevo super repositorio\clase misteriosa (memoria dinamica o punteros)\punterosomemoriadinamica.h
+	<stdio.h>
+	<stdlib.h>
+
+1571411195 source:d:\martinezlm\nuevo super repositorio\clase misteriosa (memoria dinamica o punteros)\main.c
+	"punterosomemoriadinamica.h"
+

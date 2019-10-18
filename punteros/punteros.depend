@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1570803960 source:d:\martinezlm\nuevo super repositorio\punteros\punteros.c
+	"punteros.h"
+
+1570803208 source:d:\martinezlm\nuevo super repositorio\punteros\main.c
+	"punteros.h"
+
+1570803960 d:\martinezlm\nuevo super repositorio\punteros\punteros.h
+	<stdio.h>
+	<stdlib.h>
+

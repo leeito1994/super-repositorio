@@ -26,7 +26,7 @@ int mostrarPersona(sPersona* unaPersona)
     int retorno=-1;
     if(unaPersona != NULL)
     {
-        printf("%d---%d---%f",unaPersona->legajo,unaPersona->edad,unaPersona->altura);
+        printf("%d---%c---%f",unaPersona->legajo,unaPersona->sexo,unaPersona->altura);
         retorno = 1;
     }
 
@@ -45,17 +45,35 @@ int deletePersona(sPersona* unaPersona)
     return retorno;
 }
 
-sPersona* new_Persona_Parametros(int legajo,int edad,float altura)
+sPersona* new_Persona_Parametros(int legajo,char sexo,float altura)
 {
     sPersona* miPersona = new_persona();///(sPersona*) malloc(sizeof(ePersona));
 
     if(miPersona != NULL)
     {
         miPersona->legajo = legajo;
-        miPersona->edad = edad;
+        miPersona->sexo = sexo;
         miPersona->altura = altura;
     }
-
     return miPersona;
+}
 
+int setLegajo(sPersona* unaPersona, int legajo)
+{
+    int seteo = -1;
+    if(unaPersona != NULL && legajo > 0)
+    {
+        unaPersona->legajo = legajo;
+        seteo = 1;
+    }
+    return  seteo;
+}
+
+int getLegajo(sPersona* unaPersona)
+{
+    int legajo=-1;
+    if(unaPersona != NULL)
+    {
+        legajo = unaPersona->legajo;
+    }
 }

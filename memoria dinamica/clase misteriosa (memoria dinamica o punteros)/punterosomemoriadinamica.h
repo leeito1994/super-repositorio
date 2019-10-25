@@ -4,8 +4,8 @@
 typedef struct
 {
     int legajo;
-    //char nombre[50];
-    int edad;
+    char sexo;
+    //int edad;
     float altura;
 
 }sPersona;
@@ -13,6 +13,9 @@ typedef struct
 void messi (int);
 
 sPersona* new_persona(); ///constructor por defecto
+sPersona* new_Persona_Parametros(int,char,float); ///constructor
+
 int mostrarPersona(sPersona*);
 int deletePersona(sPersona*);
-sPersona* new_Persona_Parametros(int,int,float);
+int setLegajo(sPersona* unaPersona, int legajo);
+

@@ -18,16 +18,14 @@
     10. Salir
 *****************************************************/
 
-
 int main()
 {
     int option = 0;
+    LinkedList* listaEmpleados = ll_newLinkedList();
+    /*
     int len;
     int i;
     Employee* aux;
-    LinkedList* listaEmpleados = ll_newLinkedList();
-
-/*
 
     Employee* e1 = employee_newParametros("100","maria","10");
     e1->sueldo = 1000;
@@ -69,7 +67,6 @@ int main()
         printf("%d----%s----%d----%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
     }
 
-
     ll_sort(listaEmpleados,comparaPorNombre,1);
 
      len = ll_len(listaEmpleados);
@@ -80,16 +77,17 @@ int main()
         aux = (Employee*)ll_get(listaEmpleados,i);
         printf("%d----%s----%d----%d\n",aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
     }
-*/
-
-
-    do{
+    */
+    do
+    {
+        scanf("%d",&option);
         switch(option)
         {
-            case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
-                break;
+        case 1:
+            controller_loadFromText("data.csv",listaEmpleados);
+            break;
         }
-    }while(option != 10);
+    }
+    while(option != 10);
     return 0;
 }

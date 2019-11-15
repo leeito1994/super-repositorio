@@ -5,7 +5,6 @@
 int main()
 {
 
-
     FILE* pArchive;
 
     char miNombre[50] ;
